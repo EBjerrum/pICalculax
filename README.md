@@ -13,7 +13,7 @@ Example usage can be found in the file Example_usage.py
 ```
 fasta = 'ICECREAM'
 
-from peppKalib import find_pKas, pI
+from pICalculax import find_pKas, pI
 from rdkit import Chem
 
 mol = Chem.MolFromFASTA(fasta)
@@ -30,10 +30,10 @@ The peptides can be loaded from a SDfile
 
 ```
 #!/usr/bin/python
-""" Example usage of the peppKalib for pI prediction of unmodified and modified peptides """
+""" Example usage of the pICalculax for pI prediction of unmodified and modified peptides """
 
 from __future__ import print_function
-from peppKalib import find_pKas, pI
+from pICalculax import find_pKas, pI
 from rdkit import Chem
 from rdkit.Chem import Draw
 
@@ -79,6 +79,28 @@ print pIpred
 ```
 
 #Command line usage
+```
+$ python pICalculax.py -h
+usage: pICalculax.py [-h] [--fasta FASTA [FASTA ...]] [--pln PLN [PLN ...]]
+
+Predict isoeletric point pI of peptides and modified peptides
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --fasta FASTA [FASTA ...]
+                        Predict fasta sequence
+  --pln PLN [PLN ...]   Predict PLN sequence (Requires Proteax Desktop)
+
+#Fasta
+$ python pICalculax.py --fasta ICECREAM FATCAT
+4.14 	ICECREAM
+5.02 	FATCAT
+
+#Protein line notation (Requires Proteax Desktop)
+$ python pICalculax.py --pln H-GHANYEA-OH H-GHANY[Gla]A-OH
+5.41 	H-GHANYEA-OH
+4.77 	H-GHANY[Gla]A-OH
+```
 
 
 

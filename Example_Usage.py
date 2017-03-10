@@ -2,7 +2,7 @@
 """ Example usage of the peppKalib for pI prediction of unmodified and modified peptides """
 
 from __future__ import print_function
-from peppKalib import find_pKas, pI
+from pICalculax import find_pKas, pI
 from rdkit import Chem
 from rdkit.Chem import Draw
 
