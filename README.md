@@ -1,16 +1,17 @@
 #pICalculax
 Isoelectric point (pI) predictor for chemically modified peptides and proteins.
 
-For handling conversion of PLN to condensed molformat, Proteax desktop is needed: http://www.biochemfusion.com/products/proteax_desktop/
-A modification database for import is found in the mods_db directory
+For handling conversion of PLN to condensed molformat, [Proteax desktop](http://www.biochemfusion.com/products/proteax_desktop/) is needed.
 
-For handling condensed molfile formats, RDKit needs to be patched. Patch can be found in the rdkit_patch directory.
+A modification database for import is found in the [mods_db](https://github.com/EBjerrum/pICalculax/tree/master/mods_db) directory
+
+For handling condensed molfile formats, RDKit needs to be patched. Patch can be found in the [rdkit_patch](https://github.com/EBjerrum/pICalculax/tree/master/rdkit_patch) directory.
 
 Example usage can be found in the file Example_usage.py
 
 
 ##Example Usage interactive session
-```
+```Python
 fasta = 'ICECREAM'
 
 from pICalculax import find_pKas, pI
@@ -28,7 +29,7 @@ print pIpred
 
 The peptides can be loaded from a SDfile
 
-```
+```Python
 #!/usr/bin/python
 """ Example usage of the pICalculax for pI prediction of unmodified and modified peptides """
 
@@ -62,7 +63,7 @@ predict_show(mol)
 ```
 
 With Proteax Desktop protein line notation of modified peptides can be converted to a RDKit mol object and the pI predicted
-```
+```Python
 from proteax_desktop import *
 prtx = ProteaxDesktop()
 
@@ -79,7 +80,7 @@ print pIpred
 ```
 
 #Command line usage
-```
+```Bash
 $ python pICalculax.py -h
 usage: pICalculax.py [-h] [--fasta FASTA [FASTA ...]] [--pln PLN [PLN ...]]
 
