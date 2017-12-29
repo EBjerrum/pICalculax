@@ -1,4 +1,4 @@
-#pICalculax
+# pICalculax
 Isoelectric point (pI) predictor for chemically modified peptides and proteins.
 
 For handling conversion of PLN to condensed molformat, [Proteax desktop](http://www.biochemfusion.com/products/proteax_desktop/) is needed.
@@ -10,7 +10,7 @@ For handling condensed molfile formats, RDKit needs to be patched. Patch can be 
 Example usage can be found in the file Example_usage.py
 
 
-##Example Usage interactive session
+## Example Usage interactive session
 ```Python
 fasta = 'ICECREAM'
 
@@ -79,7 +79,7 @@ pIpred = pI(pkalist, charge)
 print pIpred
 ```
 
-#Command line usage
+## Command line usage
 ```Bash
 $ python pICalculax.py -h
 usage: pICalculax.py [-h] [--fasta FASTA [FASTA ...]] [--pln PLN [PLN ...]]
@@ -103,5 +103,33 @@ $ python pICalculax.py --pln H-GHANYEA-OH H-GHANY[Gla]A-OH
 4.77 	H-GHANY[Gla]A-OH
 ```
 
+## References
+Please cite
+
+[http://pubs.acs.org/doi/10.1021/acs.jcim.7b00030](http://pubs.acs.org/doi/10.1021/acs.jcim.7b00030)
+
+```bibtex
+@article{doi:10.1021/acs.jcim.7b00030,
+author = {Bjerrum, Esben J. and Jensen, Jan H. and Tolborg, Jakob L.},
+title = {pICalculax: Improved Prediction of Isoelectric Point for Modified Peptides},
+journal = {Journal of Chemical Information and Modeling},
+volume = {57},
+number = {8},
+pages = {1723-1727},
+year = {2017},
+doi = {10.1021/acs.jcim.7b00030},
+    note ={PMID: 28671456},
+
+URL = { 
+        http://dx.doi.org/10.1021/acs.jcim.7b00030
+    
+},
+eprint = { 
+        http://dx.doi.org/10.1021/acs.jcim.7b00030
+    
+}
+
+}
+```
 
 
