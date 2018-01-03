@@ -132,4 +132,11 @@ eprint = {
 }
 ```
 
+### Commercial Support
+Commercial support is available from 
 
+[www.wildcardconsulting.dk](https://www.wildcardconsulting.dk/contact)
+
+or 
+
+[www.biochemfusion.com](http://www.biochemfusion.com/contact/contact.html)
