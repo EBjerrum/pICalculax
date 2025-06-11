@@ -7,6 +7,33 @@ A modification database for import is found in the [mods_db](https://github.com/
 
 For handling condensed molfile formats, RDKit needs to be patched. Patch can be found in the [rdkit_patch](https://github.com/EBjerrum/pICalculax/tree/master/rdkit_patch) directory.
 
+## Installation
+
+### Standard Installation
+You can install pICalculax directly from GitHub using pip:
+
+```bash
+pip install git+https://github.com/EBjerrum/pICalculax.git
+```
+
+### Development Installation
+For development or to modify the code, you can install the package in editable mode:
+
+```bash
+# Clone the repository
+git clone https://github.com/EBjerrum/pICalculax.git
+cd pICalculax
+
+# Install in editable mode
+pip install -e .
+```
+
+### Dependencies
+The package requires:
+- RDKit
+- NumPy
+- Proteax Desktop (optional, for PLN sequence support)
+
 Example usage can be found in the file Example_usage.py
 
 
@@ -14,7 +41,7 @@ Example usage can be found in the file Example_usage.py
 ```Python
 fasta = 'ICECREAM'
 
-from pICalculax import find_pKas, pI
+from picalculax import find_pKas, pI
 from rdkit import Chem
 
 mol = Chem.MolFromFASTA(fasta)
@@ -34,7 +61,7 @@ The peptides can be loaded from a SDfile
 """ Example usage of the pICalculax for pI prediction of unmodified and modified peptides """
 
 from __future__ import print_function
-from pICalculax import find_pKas, pI
+from picalculax import find_pKas, pI
 from rdkit import Chem
 from rdkit.Chem import Draw
 
